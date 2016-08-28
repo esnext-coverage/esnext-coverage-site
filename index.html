@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
     <link rel="icon" type="image/png" href="esnext-coverage-icon.png" />
     <title>esnext-coverage</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <style>
       html, body {
         margin: 0;
@@ -14,6 +14,9 @@
         width: 100%;
         height: 100%;
         background: #fafafa;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        color: #323330;
       }
       .container {
         display: flex;
@@ -22,13 +25,18 @@
         justify-content: center;
       }
       .logo {
+        display: block;
+        border: none;
         border-radius: 5px;
       }
+      .project-description,
       .coming-soon {
-        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .coming-soon {
         font-weight: 300;
-        font-size: 24px;
-        color: #323330;
       }
     </style>
   </head>
@@ -36,8 +44,11 @@
     <a href="https://github.com/esnext-coverage">
       <img src="esnext-coverage.png" class="logo" width="100px" height="100px" alt="" />
     </a>
+    <div class="project-description">
+      modular coverage tools<br>for the modern web
+    </div>
     <div class="coming-soon">
-      coming soon
+      coming soon...
     </div>
   </body>
 </html>
