@@ -1,0 +1,73 @@
+.browser {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 3rem rgba(0, 75, 150, 0.1);
+  overflow: hidden;
+
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+@media (min-width: 768px) {
+  .browser {
+    width: 640px;
+  }
+}
+@media (min-width: 860px) {
+  .browser {
+    width: 768px;
+  }
+}
+
+.browser-header {
+  display: flex;
+  align-items: center;
+  flex: 0 0 2rem;
+  border-radius: 5px 5px 0 0;
+  background-color: #404852;
+}
+
+.browser-header__control--a,
+.browser-header__control--b,
+.browser-header__control--c {
+  flex: 0 0 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-left: 0.5rem;
+}
+.browser-header__control--a {
+  margin-left: 0.8rem;
+  background-color: #fc615d;
+}
+.browser-header__control--b {
+  background-color: #fdbf41;
+}
+.browser-header__control--c {
+  background-color: #34c84a;
+}
+
+.browser-body {
+  flex: 0 0 162px;
+  border: 1px solid rgba(0, 75, 150, 0.1);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #f3f5f9;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .browser-body {
+    flex: 0 0 345px;
+  }
+}
+@media (min-width: 860px) {
+  .browser-body {
+    flex: 0 0 413px;
+  }
+}

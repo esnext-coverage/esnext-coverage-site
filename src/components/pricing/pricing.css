@@ -1,0 +1,142 @@
+.pricing-plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .pricing-plans {
+    flex-direction: row;
+  }
+}
+
+%pricing-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  flex: 0 0 26rem;
+  width: 17rem;
+  padding: 2rem 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: 0.4rem;
+  color: #3c424f;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 640px) and (orientation: portrait) {
+  %pricing-plan {
+    padding: 1rem 0;
+    flex: 0 0 15rem;
+    height: 24rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  %pricing-plan {
+    flex: 0 0 17rem;
+    height: 26rem;
+    padding: 2rem 1rem;
+  }
+}
+
+.pricing-plan--open-source {
+  @extend %pricing-plan;
+}
+
+.pricing-plan--standard {
+  @extend %pricing-plan;
+  margin: 0 1rem;
+  flex: 0 0 28rem;
+  width: 17rem;
+  padding: 2.8rem 1rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 640px) and (orientation: portrait) {
+  .pricing-plan--standard {
+    padding: 1.5rem 0;
+    flex: 0 0 15rem;
+    height: 26rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing-plan--standard {
+    flex: 0 0 19rem;
+    height: 28rem;
+    padding: 2.2rem 1rem;
+  }
+}
+
+.pricing-plan--pro {
+  @extend %pricing-plan;
+}
+
+.pricing-plan-title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.pricing-plan-price {
+  position: relative;
+  font-size: 5rem;
+  font-weight: 300;
+  letter-spacing: -0.5rem;
+}
+
+.pricing-plan--open-source > .pricing-plan-price {
+  color: #65c163;
+}
+.pricing-plan--standard > .pricing-plan-price {
+  margin-top: 0.2rem;
+  color: #31a3d2;
+}
+.pricing-plan--pro > .pricing-plan-price {
+  color: #794eb1;
+}
+
+.pricing-plan-price::before {
+  content: '$';
+  position: absolute;
+  left: -1rem;
+  top: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.pricing-plan-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #999;
+}
+
+.pricing-plan-perks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.pricing-plan-perk {
+  margin: 0.25rem 0;
+}
+
+.pricing-plan-cta {
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  border-radius: 0.4rem;
+  width: 10rem;
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.pricing-plan--standard > .pricing-plan-cta {
+  margin-top: 1.2rem;
+}

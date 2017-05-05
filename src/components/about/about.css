@@ -1,0 +1,88 @@
+.instrumentation-img {
+  margin: 2.5rem 0 1.5rem 0;
+  width: 50vw;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 23.376rem;
+  margin-top: 2rem;
+}
+
+.grid--noimg {
+  @extend .grid;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    width: 46.76rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    width: 70.126rem;
+  }
+}
+
+.grid-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 23.375rem;
+  padding: 2rem 1.5rem;
+  height: 23.375rem;
+}
+
+@media (max-width: 767px) {
+  .grid-cell:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .grid-cell:nth-child(2n) {
+    border-left: 1px solid #eee;
+  }
+
+  .grid-cell:nth-child(-n + 4) {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-cell:nth-child(3n + 2),
+  .grid-cell:nth-child(3n + 3) {
+    border-left: 1px solid #eee;
+  }
+
+  .grid-cell:nth-child(-n + 3) {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.grid-cell-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.grid--noimg .grid-cell-title {
+  margin-top: 3.5rem;
+}
+
+.grid-cell-description {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  font-weight: 400;
+}
+
+.feature-image {
+  margin-top: 0.5rem;
+  width: 315px;
+}
